@@ -1,0 +1,341 @@
+:root {
+  --text: #111;
+  --muted: #555;
+  --mutedhover: #777;
+  --line: #bbb;
+  --link: #0645ad;
+  --csbd: #b79301;
+  --max-width: 740px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+nav a {
+  color: var(--muted);
+}
+
+nav a:hover {
+  color: var(--mutedhover);
+  text-decoration: none;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  text-underline-offset: .12em;
+}
+
+.csbd {
+  color: var(--csbd);
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.site-header,
+main,
+footer {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 2rem 0 .85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-name {
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-name:hover {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero {
+  padding: 1.5rem 0 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 .4rem;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.1rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.hero-intro {
+  margin: 0 0 0;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: .35rem 0;
+  margin: 1.25rem 0 0;
+}
+
+.facts dt {
+  font-weight: bold;
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.talk-section {
+  padding: 2.25rem 0 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-heading {
+  margin-bottom: .75rem;
+}
+
+.section-heading .eyebrow {
+  display: none;
+}
+
+.season {
+  margin-top: 0;
+}
+
+.season-summary {
+  width: 100%;
+  padding-bottom: .75rem;
+  color: var(--text);
+}
+
+.season-summary h2 {
+  display: inline;
+}
+
+.season-summary:hover {
+  text-decoration: none;
+}
+
+.talk-card {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-top: 1px dotted var(--line);
+}
+
+.talk-content {
+  min-width: 0;
+}
+
+.talk-date {
+  padding-top: .1rem;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: normal;
+  font-variant-numeric: tabular-nums;
+}
+
+.talk-speaker {
+  margin: 0 0 .15rem;
+  font-weight: bold;
+  font-size: 1.12rem;
+}
+
+.talk-speaker span {
+  margin-left: .35rem;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.talk-card h3 {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.talk-note {
+  margin: .35rem 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+details {
+  margin-top: .55rem;
+}
+
+summary {
+  width: max-content;
+  color: var(--muted);
+  cursor: pointer;
+  text-underline-offset: .12em;
+}
+
+summary:hover {
+  text-decoration: none;
+}
+
+details p {
+  margin: .65rem 0 0;
+  font-size: .95rem;
+}
+
+.section-note {
+  margin: .5rem 0 1.5rem;
+}
+
+.empty-state,
+.about p:not(.eyebrow),
+footer {
+  color: var(--muted);
+}
+
+.about {
+  padding: 2.25rem 0;
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.about p {
+  margin: .65rem 0 0;
+}
+
+p.hero-intro {
+  margin: 0 0 0.5rem;
+}
+
+footer {
+  padding: 2rem 0 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: .9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 16px;
+  }
+
+  .site-header {
+    display: block;
+    padding-block: 1rem .75rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  nav {
+    margin-top: .45rem;
+    gap: .8rem;
+    flex-wrap: wrap;
+    font-size: .95rem;
+  }
+
+  .hero {
+    padding: 1.5rem 0;
+  }
+
+  .facts {
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 1rem;
+  }
+
+  .facts dt {
+    margin-top: .5rem;
+  }
+
+  .facts dt:first-child {
+    margin-top: 0;
+  }
+
+  .facts dd {
+    margin: 0;
+  }
+
+
+  .talk-section {
+    padding: 1.75rem 0;
+  }
+
+  .talk-card {
+    grid-template-columns: 3.75rem minmax(0, 1fr);
+    gap: .65rem;
+    padding: 1rem 0;
+  }
+
+  .talk-speaker {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: .35rem;
+    align-items: baseline;
+  }
+
+  .talk-speaker span {
+    margin-left: 0;
+  }
+
+  details p {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
