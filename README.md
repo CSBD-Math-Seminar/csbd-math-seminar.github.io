@@ -4,7 +4,7 @@ This is the repository for the website of the CSBD Math Seminar, which can be fo
 
 ## Structure of the repository
 
-The content of the website is controlled by `index.html`. The design is controlled by `styles.css`. The file `.nojekyll` is a technical file that tells GitHub that the website is not using Jekyll.
+The content of the website is controlled by `index.html`. The design is controlled by `styles.css`. The file `.github/workflows/deploy.yml` is a technical file that tells GitHub how to deploy the site when we make updates.
 
 ## Format of abstracts
 An abstract for a talk has the following form. Note that the website supports $\LaTeX$ via [MathJax](https://www.mathjax.org/).
